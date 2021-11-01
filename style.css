@@ -1,0 +1,44 @@
+.bd-placeholder-img {
+    font-size: 1.125rem;
+    text-anchor: middle;
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    user-select: none;
+  }
+
+  /* Show it's not fixed to the top */
+  body {
+    min-height: 75rem;
+  }
+
+  table.table-bordered{
+    border:1px solid rgb(29, 29, 82);
+    margin-top:20px;
+  }
+
+  table.table-bordered thead > tr{
+    border-radius: 50px;
+  }
+    table.table-bordered > thead > tr > th{
+        border:1px solid rgb(29, 29, 82);
+    }
+    table.table-bordered > tbody > tr > td{
+        border:1px solid rgb(29, 29, 82);
+    }
+
+  @media (min-width: 768px) {
+    .bd-placeholder-img-lg {
+      font-size: 3.5rem;
+    }
+  }
+  [v-cloak]{
+      display:none;
+  }
+
+  .bg-purple{
+      background-color: #7367f0;
+  }
+
+  .bg-purple-light{
+    background: #e6e4ff !important;
+  }

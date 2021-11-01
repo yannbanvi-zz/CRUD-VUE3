@@ -1,0 +1,186 @@
+
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="">
+    <meta name="author" content="Mark Otto, Jacob Thornton, and Bootstrap contributors">
+    <meta name="generator" content="Hugo 0.88.1">
+    <title>Top navbar example · Bootstrap v5.1</title>
+
+    <link rel="canonical" href="https://getbootstrap.com/docs/5.1/examples/navbar-static/">
+
+    
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css" integrity="sha512-1ycn6IcaQQ40/MKBW2W4Rhis/DbILU74C1vSrLJxCq57o941Ym01SwNsOMqvEBFlcgUa6xLiPY/NS5R+E6ztJQ==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <!-- <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-F3w7mX95PdgyTmZZMECAngseQB83DfGTowi0iMjiWaeVhAn4FJkqJByhZMI3AhiU" crossorigin="anonymous"> -->
+
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bootswatch/5.1.1/journal/bootstrap.min.css" integrity="sha512-cSASQQjo5ZhpNg+z0cFB/e3qV6IECirhFhzX7HQdUyLduoo08yfivbKh9e5MQVUSUkb9L7+chWe4hw4vX8c2OA==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    
+    <link rel="stylesheet" href="style.css">
+
+    
+  </head>
+  <body>
+    <div class="pb-5">
+        <nav class="navbar navbar-expand-md navbar-dark bg-purple mb-4">
+            <div class="container-fluid">
+                <a class="navbar-brand" href="#">CRUD</a>
+                <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarCollapse" aria-controls="navbarCollapse" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+                </button>
+                <div class="collapse navbar-collapse" id="navbarCollapse">
+                <ul class="navbar-nav me-auto mb-2 mb-md-0">
+                    <li class="nav-item">
+                    <a class="nav-link"  aria-current="page" href="#" ><i class="fas fa-home"></i> Accueil</a>
+                    </li>
+                    <li class="nav-item">
+                    <a class="nav-link"  href="#" ><i class="fas fa-users-cog"></i> Gestion des étudiants</a>
+                    </li>
+                </ul>
+                <form class="d-flex">
+                    <input class="form-control me-2" type="search" placeholder="Recherche" aria-label="Search">
+                    <button class="btn btn-outline-warning" type="submit">Rechercher</button>
+                </form>
+                </div>
+            </div>
+        </nav>
+
+        <main class="container">
+            <div class="bg-light p-5 rounded">
+                <h1>CRUD Manager</h1>
+                <p class="lead">This example is a quick exercise to illustrate how the top-aligned navbar works. As you scroll, this navbar remains in its original position and moves with the rest of the page.</p>
+            </div>
+
+            <div class="row mt-5" >
+                <div class="col">
+                    <div class="card ">
+                        <div class="card-header text-black bg-purple-light">Gestion des étudiants</div>
+                        <div class="card-body">
+                            <div class="mb-4" >
+                                <div class="d-flex mb-2">
+                                    <h5 class="card-title flex-grow-1">Formulaire de création de nouvel étudiant</h5>
+                                </div>
+                                <form class="row g-3" >
+                                    <div class="col-6">
+                                      <label for="inputName" class="form-label">Nom(s)</label>
+                                      <input required type="text"  class="form-control" id="inputName">
+                                    </div>
+                                    <div class="col-6">
+                                      <label for="inputFirstname" class="form-label">Prénom(s)</label>
+                                      <input required type="text"  class="form-control" id="inputFirstname">
+                                    </div>
+                                    <div class="col-6">
+                                      <label for="inputDatenaissance" class="form-label">Date de naissance</label>
+                                      <input required type="date"  class="form-control" id="inputDatenaissance">
+                                    </div>
+                                    <div class="col-6">
+                                      <label for="selectNiveauScolaire" class="form-label">Niveau scolaire</label>
+                                      <select required id="selectNiveauScolaire" class="form-select">
+                                          <option value=""></option>
+                                          <option value="Terminal A">Terminal A</option>
+                                          <option value="Terminal D">Terminal D</option>
+                                          <option value="Terminal C">Terminal C</option>
+                                          <option value="Première A">Première A</option>
+                                          <option value="Première D">Première D</option>
+                                          <option value="Première C">Première C</option>
+                                          <option value="Seconde A">Seconde A</option>
+                                          <option value="Seconde C">Seconde C</option>
+                                      </select>
+                                    </div>
+                                    
+                                    <div class="col-12">
+                                      <button type="submit" class="btn btn-primary "><i class="fas fa-save"></i> Créer</button>
+                                      <button type="button" class="btn btn-danger ms-2"><i class="fas fa-backspace"></i> Retouner à la liste</button>
+                                    </div>
+                                  </form>
+                            </div>
+                            <div>
+                                <div class="d-flex mb-2" >
+                                    <h5 class="card-title flex-grow-1">Liste des étudiants</h5>
+                                    <div class="d-flex ">
+                                        <a href=""  class="btn btn-link d-block"> <i class="fas fa-user-plus"></i> Ajouter un nouvel étudiant</a>
+                                        <input type="text"  name="" id="" class="form-control">
+                                    </div>
+                                </div>
+                                <form >
+                                <table class="table table-bordered table-striped">
+                                    <thead>
+                                        <th class="text-center">Nom(s)</th>
+                                        <th class="text-center">Prénom(s)</th>
+                                        <th class="text-center">Date de naissance</th>
+                                        <th class="text-center">Niveau Scolaire</th>
+                                        <th class="text-center">Action</th>
+                                    </thead>
+                                   
+                                    <tbody>
+                                        <tr class="bg-purple-light">
+                                          
+                                                <td class="text-center">
+                                                  <input required type="text"  class="form-control" value="Toutou">
+                                                </td>
+                                                <td class="text-center">
+                                                  <input required type="text" value="Franck" class="form-control">
+                                                </td>
+                                                <td class="text-center">
+                                                  <input required type="date" value="2021-11-18	" class="form-control">
+                                                </td>
+                                                <td class="text-center">
+                                                  <select required  class="form-select">
+                                                      <option value=""></option>
+                                                      <option value="Terminal A">Terminal A</option>
+                                                      <option selected value="Terminal D">Terminal D</option>
+                                                      <option value="Terminal C">Terminal C</option>
+                                                      <option value="Première A">Première A</option>
+                                                      <option value="Première D">Première D</option>
+                                                      <option value="Première C">Première C</option>
+                                                      <option value="Seconde A">Seconde A</option>
+                                                      <option value="Seconde C">Seconde C</option>
+                                                  </select>
+                                                </td>
+                                                <td class="text-center">
+                                                    <button type="submit" class="btn btn-link" ><i class="fa fa-check"></i> Valider</button>
+                                                    <button type="button" class="btn btn-link" ><i class="fas fa-times"></i> Annuler</button>
+                                                </td>
+                                            </tr>
+                                            <tr>
+                                           
+                                              <td class="text-center">Banvi</td>
+                                              <td class="text-center">Yann Vidral</td>
+                                              <td class="text-center">2021-11-18</td>
+                                              <td class="text-center">Première C</td>
+                                              <td class="text-center">
+                                                  <button class="btn btn-link" ><i class="fas fa-edit"></i></button>
+                                                  <button class="btn btn-link" ><i class="fas fa-trash"></i></button>
+                                              </td>
+                                            
+                                          </tr>
+                                          <tr >
+                                            <td colspan="5">
+                                              <p class="alert alert-info">Aucune donnée trouvée dans la base de données</p>
+                                            </td>
+                                          </tr>
+                                    </tbody>
+                                  
+                                </table>
+                              </form>
+                            </div> 
+                            
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+        </main>
+    </div>
+
+
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.1/dist/js/bootstrap.bundle.min.js" integrity="sha384-/bQdsTh/da6pkI1MST/rWKFNjaCP5gBSY4sEBT38Q/9RBh9AH40zEOg7Hlq2THRZ" crossorigin="anonymous"></script>
+<script src="https://cdn.jsdelivr.net/npm/sweetalert2@11.1.9/dist/sweetalert2.all.min.js"></script>
+
+
+<script src="https://unpkg.com/vue@next"></script>
+
+
+  </body>
+</html>
